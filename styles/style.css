@@ -1,0 +1,66 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, #8e44ad, #c39bd3); /* Gradiente roxo */
+    background-size: 400% 400%;
+    animation: sparkle 8s ease infinite;
+}
+
+@keyframes sparkle {
+    0% { background-position: 0 0; }
+    100% { background-position: 400% 400%; }
+}
+
+@media only screen and (max-width: 768px) {
+    .carousel img {
+        width: 100%; /* Ajuste a largura das imagens para ocupar toda a largura do container */
+    }
+}
+
+header {
+    background-color: rgba(255, 255, 255, 0.8); /* Cor de fundo do cabeçalho com opacidade */
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.8); /* Cor de fundo do rodapé com opacidade */
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Estilos para o carrossel */
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch; /* Adiciona suporte ao scroll suave no iOS */
+}
+
+.carousel img {
+    flex: 0 0 auto;
+    width: 900px; /* Defina o tamanho desejado para as imagens */
+    height: auto;
+    scroll-snap-align: start;
+}
